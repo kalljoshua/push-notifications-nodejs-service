@@ -18,11 +18,12 @@ exports.SendPushNotification = (req, res, next) => {
         content_available: true,
         small_icon: "ic_notification_icon",
         headings: {
-            en: notificationData.title // Set the title from your notification object
+            en: notificationData.title // Set the title from notification object
         },
         data: {
-            operation: notificationData.operation, // Set the operation from your notification object
-            transaction_id: notificationData.transaction_id // Set the transaction ID from your notification object
+            operation: notificationData.operation, // Set the operation from notification object
+            transaction_id: notificationData.transaction_id, // Set the transaction ID from notification object
+            origin: 'otc',
         },
 
     }
